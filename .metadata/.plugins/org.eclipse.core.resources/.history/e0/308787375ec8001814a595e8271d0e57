@@ -1,0 +1,14 @@
+package java181005;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		char check = 'A';
+		System.out.println(check); // returns A
+		System.out.println((int)check); // returns 65
+		System.out.println(check + 1); // returns 66
+		System.out.println((char)(check + 1)); // returns B
+	}
+
+}

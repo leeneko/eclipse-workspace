@@ -1,0 +1,20 @@
+package java181005;
+
+import java.util.*;
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		// String[] team = new String[5];
+		// team[0] = "±è¼±¹Î"; ...
+		Scanner sc = new Scanner(System.in);
+		String[] team = {"±è¼±¹Î", "±è°æ¹Î", "Á¤½Â¿ì", "ÀÌº´Áø", "¹ÚÁ¾Áø"};
+		
+		System.out.println("==ÆÀ¿ø °Ë»ö ÇÁ·Î±×·¥==");
+		System.out.print("°Ë»öÇÒ ÆÀ¿ø ÀÔ·Â : ");
+		String input = sc.nextLine();
+		
+		sc.close();
+	}
+
+}

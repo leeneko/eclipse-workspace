@@ -1,0 +1,14 @@
+package java181010;
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		// 답		4	5	4	1	2
+		// 입력한 값	@	@	@	@	@
+		// 배점		10	20	30	20	20
+		
+		int[][] array = new int[3][5];
+		array[0][0] = 4;
+	}
+
+}

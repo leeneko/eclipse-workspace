@@ -1,0 +1,11 @@
+package java181008;
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[][] array = new int[2][2];
+		array[0][0] = 10;
+	}
+
+}

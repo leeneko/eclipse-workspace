@@ -1,0 +1,13 @@
+package java181008;
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] team_name = { "±è¼±¹Î", "±è°æ¹Î", "Á¤½Â¿ì", "ÀÌº´Áø", "¹ÚÁ¾Áø" };
+		for (String string : team_name) {
+			System.out.println(string);
+		}
+	}
+
+}
