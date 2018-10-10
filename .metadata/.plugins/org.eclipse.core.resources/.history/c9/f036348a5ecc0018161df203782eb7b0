@@ -1,0 +1,16 @@
+package java181010;
+
+public class BubbleSort {
+
+	public static void main(String[] args) {
+		// Bubble Sort (오름차순)
+		int[] array = new int[5];
+		
+		array[0] = 45;
+		array[1] = 7;
+		array[2] = 12;
+		array[3] = 82;
+		array[4] = 25;
+	}
+
+}
