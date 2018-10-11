@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ex01 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// 리스트에서 검색
 		int[] array = { 1, 9, 3, 2, 15, 32, 26 };
 		
 		Scanner sc = new Scanner(System.in);
