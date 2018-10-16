@@ -3,7 +3,7 @@ package java181010;
 public class BubbleSort {
 
 	public static void main(String[] args) {
-		// Bubble Sort (¿À¸§Â÷¼ø)
+		// Bubble Sort (ì˜¬ë¦¼ì°¨ìˆœ)
 		int[] array = { 45, 7, 12, 82, 25 };
 		int temp;
 
@@ -21,7 +21,7 @@ public class BubbleSort {
 			System.out.print(array[i] + " ");
 		}
 
-//		Bubble Sort (³»¸²Â÷¼ø)
+//		Bubble Sort (ë‚´ë¦¼ì°¨ìˆœ)
 //		int[] array = { 45, 7, 12, 82, 25 };
 //		int temp;
 //
