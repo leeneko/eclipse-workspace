@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class Ex01 {
 
 	public static void main(String[] args) {
-		// ¸®½ºÆ®¿¡¼­ °Ë»ö
+		// ë¦¬ìŠ¤íŠ¸ ì¼ë°˜ì ì¸ ê²€ìƒ‰
 		int[] array = { 1, 9, 3, 2, 15, 32, 26 };
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Ã£°íÀÚ ÇÏ´Â ¼ıÀÚ ÀÔ·Â : ");
+		System.out.print("ì°¾ê³ ì í•˜ëŠ” ìˆ«ì ì…ë ¥ : ");
 		int input = sc.nextInt();
 		
 		for (int i = 0; i < array.length; i++) {
 			if (input == array[i]) {
-				System.out.println("Ã£À¸½Ã´Â ¼ıÀÚ´Â " + i + "¹øÂ° ÀÎµ¦½º¿¡ ÀÖ½À´Ï´Ù.");
+				System.out.println("ì°¾ìœ¼ì‹œëŠ” ìˆ«ìëŠ” " + i + "ë²ˆì§¸ ì¸ë±ìŠ¤ì— ìˆìŠµë‹ˆë‹¤.");
 			}
 		}
 		sc.close();

@@ -20,17 +20,16 @@ public class S19 {
 	}
 
 	private static boolean isHarshad(int in) {
+		int temp = in;
 		boolean bool = false;
 		int sum = 0;
-		System.out.println(in);
 		// 각 자릿 수의 합 구하기
-		while(in != 0) {
-			sum += in%10;
-			in /= 10;
+		while(temp != 0) {
+			sum += temp%10;
+			temp /= 10;
 		}
-		int temp = in % sum;
 		// 합으로 수가 나누어 떨어지는지
-		if (temp == 0) {
+		if (in % sum == 0) {
 			bool = true;
 		}
 		
