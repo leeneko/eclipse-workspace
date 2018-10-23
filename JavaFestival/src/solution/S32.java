@@ -53,7 +53,16 @@ public class S32 {
 		
 		String output = "";
 		
+		int num;
 		
+		while (i > 0) {
+			num = i % 3;
+			i = i / 3;
+			if (num == 0) {
+				num -= 1;
+			}
+			output += num;
+		}
 
 		return output;
 	}
