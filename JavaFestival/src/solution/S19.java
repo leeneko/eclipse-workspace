@@ -4,14 +4,7 @@ import java.util.Scanner;
 
 public class S19 {
 
-	public static void main(String[] args) {
-		// 하샤드 수
-		// 양의 정수 x가 하샤드 수이려면 x의 자릿수의 합으로 x가 나누어져야합니다.
-		// 예를 들어 18의 자릿수 합은 1+8=9이고, 18은 9로 나누어 떨어지므로 18은 하샤드 수입니다.
-		// isHarshad 메소드는 양의 정수 n을 매개변수로 입력받습니다.
-		// 이 n이 하샤드 수인지 아닌지 판단하는 함수를 완성하세요.
-		// 예를 들어 n이 10, 12, 18이면 True, 11, 13이면 False를 리턴
-		
+	public static void main(String[] args) {		
 		Scanner sc = new Scanner(System.in);
 		int input = sc.nextInt();
 		
@@ -20,19 +13,16 @@ public class S19 {
 	}
 
 	private static boolean isHarshad(int in) {
-		int temp = in;
-		boolean bool = false;
-		int sum = 0;
-		// 각 자릿 수의 합 구하기
-		while(temp != 0) {
-			sum += temp%10;
-			temp /= 10;
-		}
-		// 합으로 수가 나누어 떨어지는지
-		if (in % sum == 0) {
-			bool = true;
-		}
+		int sum = 0; // 자릿수 합
+		// temp : 계산용 input 값
+		for (int temp = in ; temp > 0; temp /= 10) {
+			sum += temp % 10; // 자릿수 합 변수에 계산용 input 값의 1의 자리 수 누적
+		} // 반복할 때마다 1의 자리 수 제거
 		
-		return bool;
+		if (in % sum == 0) // 입력 값을 자릿수 합으로 나눴을 때 0이면
+			return true;
+		else // 0이 아니면
+			return false;
+		
 	}
 }

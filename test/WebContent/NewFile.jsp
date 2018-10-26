@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>BDO AD Calc</title>
+<title>Insert title here</title>
 </head>
 <body>
-	
+
 </body>
 </html>

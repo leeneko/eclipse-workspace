@@ -7,5 +7,6 @@ public class S37 {
 		Expressions expressions = new Expressions();
 		System.out.println(expressions.expressions(15));
 	}
-
+	
+	
 }

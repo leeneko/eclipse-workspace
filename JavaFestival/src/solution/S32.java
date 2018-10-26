@@ -3,7 +3,7 @@ package solution;
 public class S32 {
 
 	public static void main(String[] args) {
-		System.out.println(change124(10));
+		System.out.println(change124(18));
 	}
 
 	private static String change124(int i) {
@@ -32,7 +32,7 @@ public class S32 {
 		//	22		211		211
 		//	23		212		212
 		//	24		220		214
-		//	25		221		221
+		//	25		221		221 
 		//	26		222		222
 		//	27		300		224
 		//	28		301		241
@@ -53,17 +53,24 @@ public class S32 {
 		
 		String output = "";
 		
-		int num;
+		int num; // 나머지 - 몫 : i
 		
 		while (i > 0) {
 			num = i % 3;
+			
 			i = i / 3;
 			if (num == 0) {
-				num -= 1;
+				num = 4;
+				i--;
 			}
+			
+//			System.out.println("몫(i) : " + i);
+//			System.out.println("나머지(num) : " + num);
+			
 			output += num;
 		}
-
+		output = (new StringBuffer(output)).reverse().toString();
+		
 		return output;
 	}
 
