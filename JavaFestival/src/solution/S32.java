@@ -57,7 +57,6 @@ public class S32 {
 		
 		while (i > 0) {
 			num = i % 3;
-			
 			i = i / 3;
 			if (num == 0) {
 				num = 4;
@@ -69,7 +68,7 @@ public class S32 {
 			
 			output += num;
 		}
-		output = (new StringBuffer(output)).reverse().toString();
+		output = new StringBuffer(output).reverse().toString();
 		
 		return output;
 	}
