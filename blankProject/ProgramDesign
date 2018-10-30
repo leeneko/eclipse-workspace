@@ -1,0 +1,10 @@
+설계
+	유즈케이스 다이어그램
+		유저 > 회원가입, 로그인, 마을 이동(전투 포함), 상점(치료소) 이용, 보유한 포켓몬 확인, 보유한 아이템(소지금) 확인,
+		주포켓몬 설정, (보유한) 포켓몬 도감 열람, 포켓몬 놓아주기, 포켓몬 이름 바꾸기, 로그아웃
+		
+	클래스 다이어그램
+		유저(User) : ID, PW, 보유한 포켓몬(pokeList), 소지 아이템(itemList), 소지금(gold), 위치(location)
+		포켓몬(Poke) : index, 이름, Lv, HP, SP, 속성(type), skill1, skill2, 성별(gender)
+		전투(Battle) : 주 포켓몬, 교체, 상대할 포켓몬(지역에 따라 random), 진화 여부(1~15, 16~30, 31~ or 1~30, 31~ or 1~)
+						myTurn, yourTurn, 포획(catch), 아이템 사용(itemUse), 도망(escape)
