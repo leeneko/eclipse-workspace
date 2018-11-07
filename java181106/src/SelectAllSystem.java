@@ -5,30 +5,28 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class SelectSystem {
-	
-	public ArrayList<VO> select(String s) {
+public class SelectAllSystem {
+
+	public ArrayList<VO> select() {
 		
 		ArrayList<VO> list = new ArrayList<VO>();
 		
 		try {
-//			String sql = "SELECT * FROM MEMBER WHERE name LIKE '%" + s + "%'";
-			String sql = "SELECT * FROM MEMBER WHERE name LIKE ?";
+			String sql = "SELECT * FROM MEMBER";
 			
 			Connection conn = DBConnection.getConnection();
 			PreparedStatement pst = conn.prepareStatement(sql);
-			pst.setString(1, "%" + s + "%");
 			ResultSet rs = pst.executeQuery();
 			
-			if (rs != null) {
+			if(rs != null) {
 				while (rs.next()) {
-					String tempName = rs.getString("name");
-					int tempAge = rs.getInt("age");
-					String tempPhone = rs.getString("phonenum");
-					list.add(new VO(tempName, tempAge, tempPhone));
+					String name = rs.getString(1);
+					int age = rs.getInt(2);
+					String phone = rs.getString(3);
+					list.add(new VO(name, age, phone));
 				}
 			} else {
-				System.out.println("검색 실패");
+				System.out.println("테이블에 정보가 없습니다");
 			}
 			rs.close();
 			pst.close();
