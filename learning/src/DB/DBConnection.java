@@ -12,9 +12,9 @@ public class DBConnection {
 		Connection conn = null;
 		
 		try {
+			String url = "jdbc:oracle:thin:@localhost:1521:XE";
 			String user = "system";
 			String pw = "1234";
-			String url = "jdbc:oracle:thin:@localhost:1521:XE";
 			
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			conn = DriverManager.getConnection(url, user, pw);
