@@ -6,12 +6,10 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		InsertSystem IS = new InsertSystem();
-		SelectSystem SS = new SelectSystem();
-		SelectAllSystem SAS = new SelectAllSystem();
+		DAO dao = new DAO();
 		
 		while (true) {
-			System.out.print("1.입력 2.조회 3.검색 4.종료 >> ");
+			System.out.print("1.입력 2.조회 3.검색 4.삭제 5.종료 >> ");
 			int choice = sc.nextInt();
 			if (choice == 1) {
 				System.out.print("이름 : ");
@@ -21,15 +19,20 @@ public class Main {
 				System.out.print("전화번호 : ");
 				String phone = sc.next();
 				
-				IS.insert(name, age, phone);
+				dao.insert(name, age, phone);
 			} else if (choice == 2) {
-				ArrayList<VO> list = SAS.select();
+				ArrayList<VO> list = dao.select();
 				print(list);
 			} else if (choice == 3) {
 				System.out.print("검색할 이름 : ");
-				ArrayList<VO> list = SS.select(sc.next());
+				ArrayList<VO> list = dao.select(sc.next());
+				System.out.println(list.size() + "명 검색됨");
 				print(list);
 			} else if (choice == 4) {
+				System.out.print("삭제할 이름 : ");
+				int result = dao.delete(sc.next());
+				System.out.println(result + "명 삭제됨");
+			} else if (choice == 5) {
 				break;
 			}
 		}

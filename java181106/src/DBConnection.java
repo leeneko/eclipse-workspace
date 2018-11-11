@@ -5,9 +5,9 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
-	public static Connection dbConn;
+	Connection conn;
 	
-	public static Connection getConnection() {
+	public static Connection conn() {
 		Connection conn = null;
 		
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
