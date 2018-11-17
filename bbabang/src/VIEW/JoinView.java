@@ -97,13 +97,19 @@ public class JoinView {
 				String license = licenseField.getText();
 				
 				MemberVO vo = new MemberVO(id, pw, name, phone, post, address, license);
-				boolean bool = dao.join(vo);
-				if (bool) {
+				int result = dao.join(vo);
+				if (result == 1) {
 					JOptionPane.showMessageDialog(frame,
 						    "회원가입 성공",
 						    "회원가입",
 						    JOptionPane.PLAIN_MESSAGE);
 					frame.setVisible(false);
+				} else if (result == 2) {
+					JOptionPane.showMessageDialog(frame,
+						    "ID is invalid or already taken",
+						    "아이디 중복",
+						    JOptionPane.PLAIN_MESSAGE);
+					idField.setText("");
 				} else {
 					JOptionPane.showMessageDialog(frame,
 						    "회원가입 실패",

@@ -16,6 +16,9 @@ public class ReviewVO {
 		this.title = title;
 		this.content = content;
 	}
+	public ReviewVO() {
+		// TODO Auto-generated constructor stub
+	}
 	public int getPostnum() {
 		return postnum;
 	}
