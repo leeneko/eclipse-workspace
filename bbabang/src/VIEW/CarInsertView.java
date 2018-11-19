@@ -71,86 +71,93 @@ public class CarInsertView {
 		panel_1.setLayout(new GridLayout(7, 0, 0, 0));
 		
 		carnumField = new JTextField();
-		carnumField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		carnumField.setForeground(new Color(0, 0, 0));
+		carnumField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		panel_1.add(carnumField);
 		carnumField.setColumns(10);
 		
 		cartypeField = new JTextField();
-		cartypeField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		cartypeField.setForeground(new Color(0, 0, 0));
+		cartypeField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		panel_1.add(cartypeField);
 		cartypeField.setColumns(10);
 		
 		carnameField = new JTextField();
-		carnameField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		carnameField.setForeground(new Color(0, 0, 0));
+		carnameField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		panel_1.add(carnameField);
 		carnameField.setColumns(10);
 		
 		carstatField = new JTextField();
-		carstatField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		carstatField.setForeground(new Color(0, 0, 0));
+		carstatField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		panel_1.add(carstatField);
 		carstatField.setColumns(10);
 		
 		rentalfeeField = new JTextField();
-		rentalfeeField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		rentalfeeField.setForeground(new Color(0, 0, 0));
+		rentalfeeField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		panel_1.add(rentalfeeField);
 		rentalfeeField.setColumns(10);
 		
 		runfeeField = new JTextField();
-		runfeeField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		runfeeField.setForeground(new Color(0, 0, 0));
+		runfeeField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		panel_1.add(runfeeField);
 		runfeeField.setColumns(10);
 		
 		oilfeeField = new JTextField();
-		oilfeeField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		oilfeeField.setForeground(new Color(0, 0, 0));
+		oilfeeField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		panel_1.add(oilfeeField);
 		oilfeeField.setColumns(10);
 		panel.setLayout(new GridLayout(7, 0, 0, 0));
 		
 		JLabel lblNewLabel = new JLabel("차량번호");
-		lblNewLabel.setForeground(new Color(0, 153, 255));
-		lblNewLabel.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		lblNewLabel.setForeground(new Color(0, 0, 0));
+		lblNewLabel.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("차종");
-		lblNewLabel_1.setForeground(new Color(0, 153, 255));
-		lblNewLabel_1.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		lblNewLabel_1.setForeground(new Color(0, 0, 0));
+		lblNewLabel_1.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("모델명");
-		lblNewLabel_2.setForeground(new Color(0, 153, 255));
-		lblNewLabel_2.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		lblNewLabel_2.setForeground(new Color(0, 0, 0));
+		lblNewLabel_2.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("등록상태");
-		lblNewLabel_3.setForeground(new Color(0, 153, 255));
-		lblNewLabel_3.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		lblNewLabel_3.setForeground(new Color(0, 0, 0));
+		lblNewLabel_3.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("대여료(시간당)");
-		lblNewLabel_4.setForeground(new Color(0, 153, 255));
-		lblNewLabel_4.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		lblNewLabel_4.setForeground(new Color(0, 0, 0));
+		lblNewLabel_4.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("주행료(Km당)");
-		lblNewLabel_5.setForeground(new Color(0, 153, 255));
-		lblNewLabel_5.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		lblNewLabel_5.setForeground(new Color(0, 0, 0));
+		lblNewLabel_5.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_6 = new JLabel("유류비(L당)");
-		lblNewLabel_6.setForeground(new Color(0, 153, 255));
-		lblNewLabel_6.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		lblNewLabel_6.setForeground(new Color(0, 0, 0));
+		lblNewLabel_6.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblNewLabel_6);
 		panel_2.setLayout(new GridLayout(1, 0, 0, 0));
 		
 		JButton confirm = new JButton("등록");
-		confirm.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		confirm.setFont(new Font("함초롬바탕", Font.BOLD, 18));
 		confirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DAO dao = new DAO();
@@ -175,8 +182,8 @@ public class CarInsertView {
 				}
 			}
 		});
-		confirm.setForeground(new Color(0, 153, 255));
-		confirm.setBackground(new Color(255, 255, 255));
+		confirm.setForeground(new Color(255, 255, 255));
+		confirm.setBackground(new Color(255, 69, 0));
 		panel_2.add(confirm);
 		
 		JButton cancel = new JButton("취소");
@@ -185,8 +192,8 @@ public class CarInsertView {
 				frame.dispose();
 			}
 		});
-		cancel.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		cancel.setForeground(new Color(0, 153, 255));
+		cancel.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		cancel.setForeground(new Color(0, 0, 0));
 		cancel.setBackground(new Color(255, 255, 255));
 		panel_2.add(cancel);
 		frame.getContentPane().setLayout(groupLayout);

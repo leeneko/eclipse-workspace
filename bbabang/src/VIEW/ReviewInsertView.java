@@ -1,22 +1,27 @@
 package VIEW;
 
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.JScrollPane;
 import java.awt.GridLayout;
-import javax.swing.JButton;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
-import java.awt.event.ActionEvent;
+
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.SwingConstants;
+
+import DAO.DAO;
+import VO.ReviewVO;
+import java.awt.Font;
+import java.awt.Color;
 
 public class ReviewInsertView {
 
@@ -68,22 +73,43 @@ public class ReviewInsertView {
 		panel_2.setLayout(new GridLayout(0, 2, 0, 0));
 		
 		btnNewButton = new JButton("작성");
+		btnNewButton.setFont(new Font("함초롬바탕", Font.BOLD, 18));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				long time = System.currentTimeMillis(); 
 				SimpleDateFormat dayTime = new SimpleDateFormat("yyyyMMddhhmmss");
-				String str = dayTime.format(new Date(time));
 //				System.out.println(str);
 				// 글번호 지정
+				DAO dao = new DAO();
+				int recent = dao.getMaxPostnum();
 				// 작성자 id = s
 				// 작성일 = str
+				String str = dayTime.format(new Date(time));
 				// 제목 = titleField.getText();
+				String title = titleField.getText();
 				// 내용 = contentField.getText();
+				String content = contentField.getText();
+				int result = dao.insertReview(new ReviewVO(recent, s, str, title, content));
+				if (result > 0) { // insert성공
+					JOptionPane.showMessageDialog(frame,
+							"작성 완료",
+							"후기",
+							JOptionPane.PLAIN_MESSAGE);
+					frame.dispose();
+				} else {
+					JOptionPane.showMessageDialog(frame,
+							"작성 실패",
+							"후기",
+							JOptionPane.PLAIN_MESSAGE);
+				}
 			}
 		});
 		panel_2.add(btnNewButton);
 		
 		btnNewButton_1 = new JButton("취소");
+		btnNewButton_1.setForeground(new Color(255, 255, 255));
+		btnNewButton_1.setBackground(new Color(128, 128, 128));
+		btnNewButton_1.setFont(new Font("함초롬바탕", Font.BOLD, 18));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
@@ -96,13 +122,16 @@ public class ReviewInsertView {
 		panel_1.add(scrollPane);
 		
 		contentField = new JTextField();
+		contentField.setFont(new Font("함초롬바탕", Font.PLAIN, 12));
 		scrollPane.setViewportView(contentField);
 		contentField.setColumns(10);
 		
 		titleField = new JTextField();
+		titleField.setFont(new Font("함초롬바탕", Font.PLAIN, 12));
 		titleField.setColumns(10);
 		
 		lblNewLabel = new JLabel("제목");
+		lblNewLabel.setFont(new Font("함초롬바탕", Font.PLAIN, 14));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(

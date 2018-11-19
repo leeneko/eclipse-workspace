@@ -14,10 +14,10 @@ import javax.swing.JTable;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.JTableHeader;
-
 import DAO.DAO;
 import VO.MemberVO;
+import java.awt.Color;
+import java.awt.Font;
 
 public class BoardView {
 
@@ -34,12 +34,16 @@ public class BoardView {
 	
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setFont(new Font("함초롬바탕", Font.PLAIN, 14));
+		frame.getContentPane().setBackground(new Color(255, 255, 255));
 		frame.setBounds(100, 100, 450, 542);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(255, 255, 255));
 		
 		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(255, 255, 255));
 		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
@@ -69,6 +73,7 @@ public class BoardView {
 		Vector<Vector<Object>> data = new Vector<>();
 		
 		table = new JTable(data, column);
+		table.setFont(new Font("함초롬바탕", Font.PLAIN, 14));
 		listSelectionModel = table.getSelectionModel();
 //		listSelectionModel.addListSelectionListener(new SharedListSelectionHandler());
 		table.setSelectionModel(listSelectionModel);
@@ -76,6 +81,9 @@ public class BoardView {
 		panel_1.setLayout(new GridLayout(0, 4, 0, 0));
 		
 		JButton btnNewButton = new JButton("글 쓰기");
+		btnNewButton.setForeground(new Color(255, 255, 255));
+		btnNewButton.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton.setBackground(new Color(255, 69, 0));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ReviewInsertView window = new ReviewInsertView(vo.getId());
@@ -84,17 +92,22 @@ public class BoardView {
 		panel_1.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("조회");
+		btnNewButton_1.setBackground(new Color(255, 255, 255));
+		btnNewButton_1.setFont(new Font("함초롬바탕", Font.BOLD, 18));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ListSelectionModel s = table.getSelectionModel();
 //				System.out.println(s.getAnchorSelectionIndex());
 //				System.out.println(s.getLeadSelectionIndex());
-				ReviewLookupView window = new ReviewLookupView(s.getLeadSelectionIndex());
+				ReviewLookupView window = new ReviewLookupView(s.getLeadSelectionIndex(), vo);
 			}
 		});
 		panel_1.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("닫기");
+		btnNewButton_2.setForeground(new Color(255, 255, 255));
+		btnNewButton_2.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton_2.setBackground(new Color(128, 128, 128));
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
@@ -102,6 +115,8 @@ public class BoardView {
 		});
 		
 		JButton btnNewButton_3 = new JButton("새로고침");
+		btnNewButton_3.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton_3.setBackground(new Color(255, 255, 255));
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DefaultTableModel model = (DefaultTableModel) table.getModel();
@@ -122,11 +137,5 @@ public class BoardView {
 			m.addRow(vector);
 		}
 	}
-	
-//	class SharedListSelectionHandler implements ListSelectionListener {
-//		public void valueChanged(ListSelectionEvent e) {
-//			
-//		}
-//	}
 
 }

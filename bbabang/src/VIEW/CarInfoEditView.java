@@ -53,8 +53,8 @@ public class CarInfoEditView {
 		JPanel panel = new JPanel();
 		
 		JLabel lblNewLabel = new JLabel("차량 번호");
-		lblNewLabel.setForeground(new Color(0, 153, 255));
-		lblNewLabel.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		lblNewLabel.setForeground(new Color(0, 0, 0));
+		lblNewLabel.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		
 		JPanel panel_1 = new JPanel();
@@ -126,41 +126,39 @@ public class CarInfoEditView {
 				frame.dispose();
 			}
 		});
-		btnNewButton_1.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		btnNewButton_1.setForeground(new Color(0, 153, 255));
-		btnNewButton_1.setBackground(new Color(255, 255, 255));
+		btnNewButton_1.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton_1.setForeground(new Color(255, 255, 255));
+		btnNewButton_1.setBackground(new Color(128, 128, 128));
 		panel_4.add(btnNewButton_1);
 		panel_5.setLayout(new GridLayout(1, 0, 0, 0));
 		
 		JButton btnNewButton = new JButton("변경");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				CarVO vo = new CarVO(
-						carnumField.getText(),
-						cartypeField.getText(),
-						carnameField.getText(),
-						carstatField.getText(),
-						Integer.parseInt(rentalfeeField.getText()),
-						Integer.parseInt(runfeeField.getText()),
-						Integer.parseInt(oilfeeField.getText())
-						);
 				DAO dao = new DAO();
-				vo = dao.carInfoEdit(vo);
-				if (vo == null) { // 변경 실패
-					JOptionPane.showMessageDialog(frame, "차량 정보 변경에 실패했습니다", "변경 실패", JOptionPane.PLAIN_MESSAGE);
+				boolean result = dao.carInfoEdit(new CarVO( carnumField.getText(), cartypeField.getText(), carnameField.getText(), carstatField.getText(),
+						Integer.parseInt(rentalfeeField.getText()), Integer.parseInt(runfeeField.getText()), Integer.parseInt(oilfeeField.getText())));
+				if (result) {
+					JOptionPane.showMessageDialog(frame,
+							"성공",
+							"회원 정보 변경",
+							JOptionPane.PLAIN_MESSAGE);
 				} else {
-					String message = "차량번호 : " + vo.getCarnum() + "\n변경 완료했습니다.";
-					JOptionPane.showMessageDialog(frame, message, "변경 완료", JOptionPane.PLAIN_MESSAGE);
+					JOptionPane.showMessageDialog(frame,
+							"실패",
+							"회원 정보 변경",
+							JOptionPane.PLAIN_MESSAGE);
 				}
 			}
 		});
-		btnNewButton.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		btnNewButton.setForeground(new Color(0, 153, 255));
+		btnNewButton.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton.setForeground(new Color(0, 0, 0));
 		btnNewButton.setBackground(new Color(255, 255, 255));
 		panel_5.add(btnNewButton);
 		panel_3.setLayout(new GridLayout(7, 0, 0, 0));
 		
 		carnumField = new JTextField();
+		carnumField.setForeground(new Color(0, 0, 0));
 		carnumField.addFocusListener(new FocusListener() {
 			public void focusGained(FocusEvent arg0) {
 				carnumField.setText("");
@@ -168,11 +166,12 @@ public class CarInfoEditView {
 			public void focusLost(FocusEvent arg0) {
 			}
 		});
-		carnumField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		carnumField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		panel_3.add(carnumField);
 		carnumField.setColumns(10);
 		
 		cartypeField = new JTextField();
+		cartypeField.setForeground(new Color(0, 0, 0));
 		cartypeField.addFocusListener(new FocusListener() {
 			public void focusGained(FocusEvent arg0) {
 				cartypeField.setText("");
@@ -180,11 +179,12 @@ public class CarInfoEditView {
 			public void focusLost(FocusEvent arg0) {
 			}
 		});
-		cartypeField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		cartypeField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		panel_3.add(cartypeField);
 		cartypeField.setColumns(10);
 		
 		carnameField = new JTextField();
+		carnameField.setForeground(new Color(0, 0, 0));
 		carnameField.addFocusListener(new FocusListener() {
 			public void focusGained(FocusEvent arg0) {
 				carnameField.setText("");
@@ -192,11 +192,12 @@ public class CarInfoEditView {
 			public void focusLost(FocusEvent arg0) {
 			}
 		});
-		carnameField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		carnameField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		panel_3.add(carnameField);
 		carnameField.setColumns(10);
 		
 		carstatField = new JTextField();
+		carstatField.setForeground(new Color(0, 0, 0));
 		carstatField.addFocusListener(new FocusListener() {
 			public void focusGained(FocusEvent arg0) {
 				carstatField.setText("");
@@ -204,11 +205,12 @@ public class CarInfoEditView {
 			public void focusLost(FocusEvent arg0) {
 			}
 		});
-		carstatField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		carstatField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		panel_3.add(carstatField);
 		carstatField.setColumns(10);
 		
 		rentalfeeField = new JTextField();
+		rentalfeeField.setForeground(new Color(0, 0, 0));
 		rentalfeeField.addFocusListener(new FocusListener() {
 			public void focusGained(FocusEvent arg0) {
 				rentalfeeField.setText("");
@@ -216,11 +218,12 @@ public class CarInfoEditView {
 			public void focusLost(FocusEvent arg0) {
 			}
 		});
-		rentalfeeField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		rentalfeeField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		panel_3.add(rentalfeeField);
 		rentalfeeField.setColumns(10);
 		
 		runfeeField = new JTextField();
+		runfeeField.setForeground(new Color(0, 0, 0));
 		runfeeField.addFocusListener(new FocusListener() {
 			public void focusGained(FocusEvent arg0) {
 				runfeeField.setText("");
@@ -228,11 +231,12 @@ public class CarInfoEditView {
 			public void focusLost(FocusEvent arg0) {
 			}
 		});
-		runfeeField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		runfeeField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		panel_3.add(runfeeField);
 		runfeeField.setColumns(10);
 		
 		oilfeeField = new JTextField();
+		oilfeeField.setForeground(new Color(0, 0, 0));
 		oilfeeField.addFocusListener(new FocusListener() {
 			public void focusGained(FocusEvent arg0) {
 				oilfeeField.setText("");
@@ -240,57 +244,57 @@ public class CarInfoEditView {
 			public void focusLost(FocusEvent arg0) {
 			}
 		});
-		oilfeeField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		oilfeeField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		panel_3.add(oilfeeField);
 		oilfeeField.setColumns(10);
 		panel_2.setLayout(new GridLayout(7, 0, 0, 0));
 		
 		JLabel lblNewLabel_1 = new JLabel("차량 번호");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		lblNewLabel_1.setForeground(new Color(0, 153, 255));
+		lblNewLabel_1.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
+		lblNewLabel_1.setForeground(new Color(0, 0, 0));
 		lblNewLabel_1.setBackground(new Color(255, 255, 255));
 		panel_2.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("차종");
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		lblNewLabel_2.setForeground(new Color(0, 153, 255));
+		lblNewLabel_2.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
+		lblNewLabel_2.setForeground(new Color(0, 0, 0));
 		lblNewLabel_2.setBackground(new Color(255, 255, 255));
 		panel_2.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("모델명");
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_3.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		lblNewLabel_3.setForeground(new Color(0, 153, 255));
+		lblNewLabel_3.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
+		lblNewLabel_3.setForeground(new Color(0, 0, 0));
 		lblNewLabel_3.setBackground(new Color(255, 255, 255));
 		panel_2.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("등록상태");
 		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_4.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		lblNewLabel_4.setForeground(new Color(0, 153, 255));
+		lblNewLabel_4.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
+		lblNewLabel_4.setForeground(new Color(0, 0, 0));
 		lblNewLabel_4.setBackground(new Color(255, 255, 255));
 		panel_2.add(lblNewLabel_4);
 		
 		JLabel lblNewLabel_5 = new JLabel("대여료");
 		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_5.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		lblNewLabel_5.setForeground(new Color(0, 153, 255));
+		lblNewLabel_5.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
+		lblNewLabel_5.setForeground(new Color(0, 0, 0));
 		lblNewLabel_5.setBackground(new Color(255, 255, 255));
 		panel_2.add(lblNewLabel_5);
 		
 		JLabel lblNewLabel_6 = new JLabel("주행료");
 		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_6.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		lblNewLabel_6.setForeground(new Color(0, 153, 255));
+		lblNewLabel_6.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
+		lblNewLabel_6.setForeground(new Color(0, 0, 0));
 		lblNewLabel_6.setBackground(new Color(255, 255, 255));
 		panel_2.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_7 = new JLabel("유류비");
 		lblNewLabel_7.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_7.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		lblNewLabel_7.setForeground(new Color(0, 153, 255));
+		lblNewLabel_7.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
+		lblNewLabel_7.setForeground(new Color(0, 0, 0));
 		lblNewLabel_7.setBackground(new Color(255, 255, 255));
 		panel_2.add(lblNewLabel_7);
 		panel_1.setLayout(gl_panel_1);

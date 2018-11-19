@@ -13,6 +13,10 @@ public class RentVO {
 	private String returned;
 	private int fee;
 	
+	public RentVO() {
+		
+	}
+	
 	public RentVO(int rentnum, String rcarnum, String rentdate, String returndate, int deposit, int startkm, int endkm,
 			int startamount, int endamount, String returned, int fee) {
 		super();
@@ -126,5 +130,14 @@ public class RentVO {
 	public void setFee(int fee) {
 		this.fee = fee;
 	}
+
+	@Override
+	public String toString() {
+		return "RentVO [rentnum=" + rentnum + ", rcarnum=" + rcarnum + ", rentdate=" + rentdate + ", returndate="
+				+ returndate + ", deposit=" + deposit + ", startkm=" + startkm + ", endkm=" + endkm + ", startamount="
+				+ startamount + ", endamount=" + endamount + ", returned=" + returned + ", fee=" + fee + "]";
+	}
+	
+	
 	
 }

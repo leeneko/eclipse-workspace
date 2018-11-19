@@ -38,8 +38,8 @@ public class ManagerMainView {
 				CarInsertView window = new CarInsertView();
 			}
 		});
-		btnNewButton.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		btnNewButton.setForeground(new Color(0, 153, 255));
+		btnNewButton.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton.setForeground(new Color(0, 0, 0));
 		btnNewButton.setBackground(new Color(255, 255, 255));
 		frame.getContentPane().add(btnNewButton);
 		
@@ -52,8 +52,8 @@ public class ManagerMainView {
 				JOptionPane.showMessageDialog(frame, message, "매출 확인", JOptionPane.PLAIN_MESSAGE);
 			}
 		});
-		btnNewButton_1.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		btnNewButton_1.setForeground(new Color(0, 153, 255));
+		btnNewButton_1.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton_1.setForeground(new Color(0, 0, 0));
 		btnNewButton_1.setBackground(new Color(255, 255, 255));
 		frame.getContentPane().add(btnNewButton_1);
 		
@@ -64,8 +64,8 @@ public class ManagerMainView {
 				window.setUser();
 			}
 		});
-		btnNewButton_2.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		btnNewButton_2.setForeground(new Color(0, 153, 255));
+		btnNewButton_2.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton_2.setForeground(new Color(0, 0, 0));
 		btnNewButton_2.setBackground(new Color(255, 255, 255));
 		frame.getContentPane().add(btnNewButton_2);
 		
@@ -76,8 +76,8 @@ public class ManagerMainView {
 				window.selectAll();
 			}
 		});
-		btnNewButton_3.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		btnNewButton_3.setForeground(new Color(0, 153, 255));
+		btnNewButton_3.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton_3.setForeground(new Color(0, 0, 0));
 		btnNewButton_3.setBackground(new Color(255, 255, 255));
 		frame.getContentPane().add(btnNewButton_3);
 		
@@ -87,8 +87,8 @@ public class ManagerMainView {
 				CarInfoEditView window = new CarInfoEditView();
 			}
 		});
-		btnNewButton_4.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		btnNewButton_4.setForeground(new Color(0, 153, 255));
+		btnNewButton_4.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton_4.setForeground(new Color(0, 0, 0));
 		btnNewButton_4.setBackground(new Color(255, 255, 255));
 		frame.getContentPane().add(btnNewButton_4);
 		
@@ -99,8 +99,8 @@ public class ManagerMainView {
 				window.selectAll();
 			}
 		});
-		btnNewButton_5.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		btnNewButton_5.setForeground(new Color(0, 153, 255));
+		btnNewButton_5.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton_5.setForeground(new Color(0, 0, 0));
 		btnNewButton_5.setBackground(new Color(255, 255, 255));
 		frame.getContentPane().add(btnNewButton_5);
 		
@@ -111,14 +111,19 @@ public class ManagerMainView {
 				window.selectReview();
 			}
 		});
-		btnNewButton_6.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		btnNewButton_6.setForeground(new Color(0, 153, 255));
+		btnNewButton_6.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton_6.setForeground(new Color(0, 0, 0));
 		btnNewButton_6.setBackground(new Color(255, 255, 255));
 		frame.getContentPane().add(btnNewButton_6);
 		
 		JButton btnNewButton_7 = new JButton("고객센터");
-		btnNewButton_7.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		btnNewButton_7.setForeground(new Color(0, 153, 255));
+		btnNewButton_7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				InfoView window = new InfoView();
+			}
+		});
+		btnNewButton_7.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton_7.setForeground(new Color(0, 0, 0));
 		btnNewButton_7.setBackground(new Color(255, 255, 255));
 		frame.getContentPane().add(btnNewButton_7);
 	}

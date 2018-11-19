@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.WindowConstants;
 
 import DAO.DAO;
 import VO.MemberVO;
@@ -78,13 +79,21 @@ public class SearchView {
 		);
 		
 		JLabel lblNewLabel = new JLabel("이름");
+		lblNewLabel.setForeground(new Color(0, 0, 0));
+		lblNewLabel.setFont(new Font("함초롬바탕", Font.BOLD, 14));
 		
 		inputIdName = new JTextField();
+		inputIdName.setForeground(new Color(0, 0, 0));
+		inputIdName.setFont(new Font("함초롬바탕", Font.PLAIN, 14));
 		inputIdName.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("전화번호");
+		lblNewLabel_1.setForeground(new Color(0, 0, 0));
+		lblNewLabel_1.setFont(new Font("함초롬바탕", Font.BOLD, 14));
 		
 		inputIdPhone = new JTextField();
+		inputIdPhone.setForeground(new Color(0, 0, 0));
+		inputIdPhone.setFont(new Font("함초롬바탕", Font.PLAIN, 14));
 		inputIdPhone.setColumns(10);
 		GroupLayout gl_panel_2 = new GroupLayout(panel_2);
 		gl_panel_2.setHorizontalGroup(
@@ -134,9 +143,9 @@ public class SearchView {
 				}
 			}
 		});
-		btnNewButton.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		btnNewButton.setBackground(new Color(255, 255, 255));
-		btnNewButton.setForeground(new Color(0, 153, 255));
+		btnNewButton.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton.setBackground(new Color(255, 69, 0));
+		btnNewButton.setForeground(new Color(255, 255, 255));
 		panel_4.add(btnNewButton);
 		panel.setLayout(gl_panel);
 		
@@ -152,6 +161,16 @@ public class SearchView {
 		JPanel panel_5 = new JPanel();
 		panel_5.setBackground(new Color(255, 255, 255));
 		panel_5.setForeground(new Color(0, 153, 255));
+		
+		JButton btnNewButton_2 = new JButton("닫기");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+			}
+		});
+		btnNewButton_2.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton_2.setForeground(new Color(255, 255, 255));
+		btnNewButton_2.setBackground(new Color(128, 128, 128));
 		GroupLayout gl_panel_1 = new GroupLayout(panel_1);
 		gl_panel_1.setHorizontalGroup(
 			gl_panel_1.createParallelGroup(Alignment.LEADING)
@@ -159,34 +178,49 @@ public class SearchView {
 					.addContainerGap()
 					.addComponent(panel_3, GroupLayout.PREFERRED_SIZE, 254, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(panel_5, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
+					.addGroup(gl_panel_1.createParallelGroup(Alignment.TRAILING)
+						.addComponent(panel_5, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
+						.addComponent(btnNewButton_2, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 111, GroupLayout.PREFERRED_SIZE))
 					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 		);
 		gl_panel_1.setVerticalGroup(
-			gl_panel_1.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_panel_1.createSequentialGroup()
+			gl_panel_1.createParallelGroup(Alignment.TRAILING)
+				.addGroup(Alignment.LEADING, gl_panel_1.createSequentialGroup()
 					.addGap(84)
 					.addComponent(panel_5, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-				.addGroup(Alignment.TRAILING, gl_panel_1.createSequentialGroup()
+					.addPreferredGap(ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+					.addComponent(btnNewButton_2, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE))
+				.addGroup(gl_panel_1.createSequentialGroup()
 					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 					.addComponent(panel_3, GroupLayout.PREFERRED_SIZE, 254, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap())
 		);
 		
 		JLabel label = new JLabel("이름");
+		label.setForeground(new Color(0, 0, 0));
+		label.setFont(new Font("함초롬바탕", Font.BOLD, 14));
 		
 		inputPwName = new JTextField();
+		inputPwName.setForeground(new Color(0, 0, 0));
+		inputPwName.setFont(new Font("함초롬바탕", Font.PLAIN, 14));
 		inputPwName.setColumns(10);
 		
 		JLabel label_1 = new JLabel("아이디");
+		label_1.setForeground(new Color(0, 0, 0));
+		label_1.setFont(new Font("함초롬바탕", Font.BOLD, 14));
 		
 		inputPwId = new JTextField();
+		inputPwId.setForeground(new Color(0, 0, 0));
+		inputPwId.setFont(new Font("함초롬바탕", Font.PLAIN, 14));
 		inputPwId.setColumns(10);
 		
 		JLabel label_2 = new JLabel("전화번호");
+		label_2.setForeground(new Color(0, 0, 0));
+		label_2.setFont(new Font("함초롬바탕", Font.BOLD, 14));
 		
 		inputPwPhone = new JTextField();
+		inputPwPhone.setForeground(new Color(0, 0, 0));
+		inputPwPhone.setFont(new Font("함초롬바탕", Font.PLAIN, 14));
 		inputPwPhone.setColumns(10);
 		GroupLayout gl_panel_3 = new GroupLayout(panel_3);
 		gl_panel_3.setHorizontalGroup(
@@ -244,9 +278,9 @@ public class SearchView {
 				}
 			}
 		});
-		btnNewButton_1.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		btnNewButton_1.setBackground(new Color(255, 255, 255));
-		btnNewButton_1.setForeground(new Color(0, 153, 255));
+		btnNewButton_1.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton_1.setBackground(new Color(255, 69, 0));
+		btnNewButton_1.setForeground(new Color(255, 255, 255));
 		panel_5.add(btnNewButton_1);
 		panel_1.setLayout(gl_panel_1);
 	}

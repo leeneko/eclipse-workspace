@@ -29,6 +29,8 @@ import javax.swing.JTextField;
 import javax.swing.JScrollPane;
 import javax.swing.JList;
 import javax.swing.JTable;
+import java.awt.Font;
+import java.awt.Color;
 
 public class RentConfirmView{
 
@@ -109,6 +111,9 @@ public class RentConfirmView{
 		panel_2.setLayout(new GridLayout(0, 1, 0, 0));
 		
 		JButton btnNewButton = new JButton("닫기");
+		btnNewButton.setForeground(new Color(255, 255, 255));
+		btnNewButton.setBackground(new Color(128, 128, 128));
+		btnNewButton.setFont(new Font("함초롬바탕", Font.BOLD, 18));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();

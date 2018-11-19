@@ -17,6 +17,10 @@ public class InfoVO {
 		this.contact = contact;
 	}
 
+	public InfoVO() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getCompname() {
 		return compname;
 	}

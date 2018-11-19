@@ -118,9 +118,9 @@ public class JoinView {
 				}
 			}
 		});
-		btnNewButton.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		btnNewButton.setForeground(new Color(0, 102, 255));
-		btnNewButton.setBackground(new Color(255, 255, 255));
+		btnNewButton.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton.setForeground(new Color(255, 255, 255));
+		btnNewButton.setBackground(new Color(255, 69, 0));
 		panel_3.add(btnNewButton);
 		
 		btnNewButton_1 = new JButton("취소");
@@ -129,9 +129,9 @@ public class JoinView {
 				frame.setVisible(false);
 			}
 		});
-		btnNewButton_1.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		btnNewButton_1.setForeground(new Color(0, 102, 255));
-		btnNewButton_1.setBackground(new Color(255, 255, 255));
+		btnNewButton_1.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton_1.setForeground(new Color(255, 255, 255));
+		btnNewButton_1.setBackground(new Color(128, 128, 128));
 		panel_3.add(btnNewButton_1);
 		
 		JPanel panel_1 = new JPanel();
@@ -157,50 +157,50 @@ public class JoinView {
 		panel_1.setLayout(new GridLayout(7, 0, 0, 0));
 		
 		JLabel lblNewLabel = new JLabel("아이디");
-		lblNewLabel.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		lblNewLabel.setForeground(new Color(0, 102, 255));
+		lblNewLabel.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		lblNewLabel.setForeground(new Color(0, 0, 0));
 		lblNewLabel.setBackground(new Color(255, 255, 255));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("비밀번호");
-		lblNewLabel_1.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		lblNewLabel_1.setForeground(new Color(0, 102, 255));
+		lblNewLabel_1.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		lblNewLabel_1.setForeground(new Color(0, 0, 0));
 		lblNewLabel_1.setBackground(new Color(255, 255, 255));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("이름");
-		lblNewLabel_2.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		lblNewLabel_2.setForeground(new Color(0, 102, 255));
+		lblNewLabel_2.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		lblNewLabel_2.setForeground(new Color(0, 0, 0));
 		lblNewLabel_2.setBackground(new Color(255, 255, 255));
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("휴대전화");
-		lblNewLabel_3.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		lblNewLabel_3.setForeground(new Color(0, 102, 255));
+		lblNewLabel_3.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		lblNewLabel_3.setForeground(new Color(0, 0, 0));
 		lblNewLabel_3.setBackground(new Color(255, 255, 255));
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_3);
 		
 		lblNewLabel_4 = new JLabel("우편번호");
-		lblNewLabel_4.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		lblNewLabel_4.setForeground(new Color(0, 102, 255));
+		lblNewLabel_4.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		lblNewLabel_4.setForeground(new Color(0, 0, 0));
 		lblNewLabel_4.setBackground(new Color(255, 255, 255));
 		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_4);
 		
 		lblNewLabel_5 = new JLabel("상세주소");
-		lblNewLabel_5.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		lblNewLabel_5.setForeground(new Color(0, 102, 255));
+		lblNewLabel_5.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		lblNewLabel_5.setForeground(new Color(0, 0, 0));
 		lblNewLabel_5.setBackground(new Color(255, 255, 255));
 		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_5);
 		
 		lblNewLabel_6 = new JLabel("면허등록번호");
-		lblNewLabel_6.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		lblNewLabel_6.setForeground(new Color(0, 102, 255));
+		lblNewLabel_6.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		lblNewLabel_6.setForeground(new Color(0, 0, 0));
 		lblNewLabel_6.setBackground(new Color(255, 255, 255));
 		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_1.add(lblNewLabel_6);
@@ -208,19 +208,19 @@ public class JoinView {
 		
 		idField = new JTextField();
 		idField.setDocument(new JTextFieldLimit(20));
-		idField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		idField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		idField.setForeground(new Color(0, 0, 0));
 		panel_2.add(idField);
 		idField.setColumns(10);
 		
 		passwordField = new JPasswordField();
 		passwordField.setDocument(new JTextFieldLimit(20));
-		passwordField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		passwordField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		panel_2.add(passwordField);
 		
 		nameField = new JTextField();
 		nameField.setDocument(new JTextFieldLimit(14));
-		nameField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		nameField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		nameField.setForeground(new Color(0, 0, 0));
 		panel_2.add(nameField);
 		nameField.setColumns(10);
@@ -243,7 +243,7 @@ public class JoinView {
 			}
 			
 		});
-		phoneField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		phoneField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		phoneField.setForeground(new Color(0, 0, 0));
 		panel_2.add(phoneField);
 		phoneField.setColumns(10);
@@ -264,14 +264,14 @@ public class JoinView {
 			}
 			
 		});
-		postField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		postField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		postField.setForeground(new Color(0, 0, 0));
 		panel_2.add(postField);
 		postField.setColumns(10);
 		
 		addressField = new JTextField();
 		addressField.setDocument(new JTextFieldLimit(20));
-		addressField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		addressField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		addressField.setForeground(new Color(0, 0, 0));
 		panel_2.add(addressField);
 		addressField.setColumns(10);
@@ -295,7 +295,7 @@ public class JoinView {
 			}
 			
 		});
-		licenseField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		licenseField.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		licenseField.setForeground(new Color(0, 0, 0));
 		panel_2.add(licenseField);
 		licenseField.setColumns(10);

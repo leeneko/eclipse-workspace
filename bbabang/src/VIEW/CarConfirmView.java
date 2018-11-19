@@ -20,6 +20,8 @@ import javax.swing.event.ListSelectionListener;
 
 import DAO.DAO;
 import VIEW.CarInfoEditView.JListHandler;
+import java.awt.Font;
+import java.awt.Color;
 
 public class CarConfirmView {
 	
@@ -51,6 +53,7 @@ public class CarConfirmView {
 		Vector<Vector<Object>> data = new Vector<>();
 		
 		table = new JTable(data, column);
+		table.setFont(new Font("함초롬바탕", Font.PLAIN, 14));
 		scrollPane.setViewportView(table);
 		
 		JPanel panel = new JPanel();
@@ -75,12 +78,16 @@ public class CarConfirmView {
 		panel.add(scrollPane_1);
 		
 		list = new JList(type);
+		list.setFont(new Font("함초롬바탕", Font.PLAIN, 13));
 		JListHandler handler = new JListHandler();
 		list.addListSelectionListener(handler);
 		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		scrollPane_1.setViewportView(list);
 		
 		JButton btnNewButton_1 = new JButton("닫기");
+		btnNewButton_1.setBackground(new Color(128, 128, 128));
+		btnNewButton_1.setForeground(new Color(255, 255, 255));
+		btnNewButton_1.setFont(new Font("함초롬바탕", Font.BOLD, 16));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();

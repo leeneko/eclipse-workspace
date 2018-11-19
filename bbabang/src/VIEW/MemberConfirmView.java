@@ -80,9 +80,9 @@ public class MemberConfirmView {
 		panel.setLayout(new GridLayout(0, 3, 0, 0));
 		
 		JButton btnNewButton = new JButton("유저 찾기");
-		btnNewButton.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		btnNewButton.setForeground(new Color(0, 153, 255));
-		btnNewButton.setBackground(new Color(255, 255, 255));
+		btnNewButton.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton.setForeground(new Color(0, 0, 0));
+		btnNewButton.setBackground(new Color(128, 128, 128));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				selectUser(textField.getText());
@@ -90,6 +90,7 @@ public class MemberConfirmView {
 		});
 		
 		textField = new JTextField();
+		textField.setForeground(new Color(0, 0, 0));
 		textField.addFocusListener(new FocusListener() {
 
 			@Override
@@ -104,7 +105,7 @@ public class MemberConfirmView {
 			}
 			
 		});
-		textField.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
+		textField.setFont(new Font("함초롬바탕", Font.BOLD, 18));
 		textField.setBackground(new Color(255, 255, 255));
 		textField.setHorizontalAlignment(SwingConstants.CENTER);
 		textField.setText("찾을 회원의 이름");
@@ -113,9 +114,9 @@ public class MemberConfirmView {
 		panel.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("닫기");
-		btnNewButton_1.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		btnNewButton_1.setForeground(new Color(0, 153, 255));
-		btnNewButton_1.setBackground(new Color(255, 255, 255));
+		btnNewButton_1.setFont(new Font("함초롬바탕", Font.BOLD, 18));
+		btnNewButton_1.setForeground(new Color(255, 255, 255));
+		btnNewButton_1.setBackground(new Color(128, 128, 128));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
