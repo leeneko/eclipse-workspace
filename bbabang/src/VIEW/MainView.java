@@ -33,10 +33,10 @@ public class MainView {
 		frame.getContentPane().setLayout(new GridLayout(0, 3, 0, 0));
 		
 		JButton btnNewButton = new JButton();
+		btnNewButton.setBackground(new Color(255, 255, 255));
 		ImageIcon icon = null;
 		try {
-			icon = new ImageIcon(ImageIO.read(ReserView.class.getResource("image\\button\\KakaoTalk_20181119_132655804.png")).getScaledInstance(120,
-					90, java.awt.Image.SCALE_SMOOTH));
+			icon = new ImageIcon(ImageIO.read(ReserView.class.getResource("/image/reservButton.png")).getScaledInstance(165, 130, java.awt.Image.SCALE_SMOOTH));
 		} catch (Exception e) {
 		}
 		btnNewButton.setIcon(icon);
@@ -47,11 +47,15 @@ public class MainView {
 			}
 		});
 		btnNewButton.setFont(new Font("나눔바른고딕", Font.PLAIN, 18));
-		btnNewButton.setBackground(new Color(255, 255, 255));
-		btnNewButton.setForeground(new Color(0, 153, 255));
 		frame.getContentPane().add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("");
+		JButton btnNewButton_1 = new JButton();
+		ImageIcon icon1 = null;
+		try {
+			icon1 = new ImageIcon(ImageIO.read(ReserView.class.getResource("/image/returnButton.png")).getScaledInstance(165, 130, java.awt.Image.SCALE_SMOOTH));
+		} catch (Exception e) {
+		}
+		btnNewButton_1.setIcon(icon1);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ReturnView window = new ReturnView(vo);
@@ -63,7 +67,13 @@ public class MainView {
 		btnNewButton_1.setForeground(new Color(0, 153, 255));
 		frame.getContentPane().add(btnNewButton_1);
 		
-		JButton btnNewButton_2 = new JButton("");
+		JButton btnNewButton_2 = new JButton();
+		ImageIcon icon2 = null;
+		try {
+			icon2 = new ImageIcon(ImageIO.read(ReserView.class.getResource("/image/reviewButton.png")).getScaledInstance(165, 130, java.awt.Image.SCALE_SMOOTH));
+		} catch (Exception e) {
+		}
+		btnNewButton_2.setIcon(icon2);
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				BoardView window = new BoardView(vo);
@@ -75,7 +85,13 @@ public class MainView {
 		btnNewButton_2.setForeground(new Color(0, 153, 255));
 		frame.getContentPane().add(btnNewButton_2);
 		
-		JButton btnNewButton_3 = new JButton("");
+		JButton btnNewButton_3 = new JButton();
+		ImageIcon icon3 = null;
+		try {
+			icon3 = new ImageIcon(ImageIO.read(ReserView.class.getResource("/image/serviceButton.png")).getScaledInstance(165, 130, java.awt.Image.SCALE_SMOOTH));
+		} catch (Exception e) {
+		}
+		btnNewButton_3.setIcon(icon3);
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				InfoView window = new InfoView();
@@ -86,7 +102,13 @@ public class MainView {
 		btnNewButton_3.setForeground(new Color(0, 153, 255));
 		frame.getContentPane().add(btnNewButton_3);
 		
-		JButton btnNewButton_4 = new JButton("");
+		JButton btnNewButton_4 = new JButton();
+		ImageIcon icon4 = null;
+		try {
+			icon4 = new ImageIcon(ImageIO.read(ReserView.class.getResource("/image/memberButton.png")).getScaledInstance(165, 130, java.awt.Image.SCALE_SMOOTH));
+		} catch (Exception e) {
+		}
+		btnNewButton_4.setIcon(icon4);
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				EditInfoView window = new EditInfoView(vo);
@@ -97,7 +119,13 @@ public class MainView {
 		btnNewButton_4.setBackground(new Color(255, 255, 255));
 		frame.getContentPane().add(btnNewButton_4);
 		
-		JButton btnNewButton_5 = new JButton("");
+		JButton btnNewButton_5 = new JButton();
+		ImageIcon icon5 = null;
+		try {
+			icon5 = new ImageIcon(ImageIO.read(ReserView.class.getResource("/image/closeButton.png")).getScaledInstance(165, 130, java.awt.Image.SCALE_SMOOTH));
+		} catch (Exception e) {
+		}
+		btnNewButton_5.setIcon(icon5);
 		btnNewButton_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();

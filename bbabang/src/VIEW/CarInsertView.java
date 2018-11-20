@@ -137,7 +137,7 @@ public class CarInsertView {
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_4 = new JLabel("대여료(시간당)");
+		JLabel lblNewLabel_4 = new JLabel("대여료");
 		lblNewLabel_4.setForeground(new Color(0, 0, 0));
 		lblNewLabel_4.setFont(new Font("함초롬바탕", Font.PLAIN, 18));
 		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);

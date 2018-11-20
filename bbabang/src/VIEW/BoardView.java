@@ -96,10 +96,10 @@ public class BoardView {
 		btnNewButton_1.setFont(new Font("함초롬바탕", Font.BOLD, 18));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				ListSelectionModel s = table.getSelectionModel();
-//				System.out.println(s.getAnchorSelectionIndex());
-//				System.out.println(s.getLeadSelectionIndex());
-				ReviewLookupView window = new ReviewLookupView(s.getLeadSelectionIndex(), vo);
+				int row = table.getSelectedRow();
+				Object value = table.getValueAt(row, 0);
+				int input = (int) value;
+				ReviewLookupView window = new ReviewLookupView(input, vo);
 			}
 		});
 		panel_1.add(btnNewButton_1);

@@ -188,8 +188,12 @@ public class DAO {
 		try {
 			conn = DBConnection.getConn();
 			// SELECT SUM(fee) FROM rent GROUP BY ROLLUP(fee);
-			String sql = "SELECT SUM(fee) FROM rent GROUP BY ROLLUP(fee)";
-			result = pstm.executeUpdate();
+			String sql = "SELECT SUM(FEE) FROM rent GROUP BY ROLLUP(fee)";
+			pstm = conn.prepareStatement(sql);
+			rs = pstm.executeQuery();
+			while (rs.next()) {
+				result += rs.getInt("SUM(FEE)");
+			}
 		} catch (Exception e) {
 			// TODO: handle exception
 		} finally {
